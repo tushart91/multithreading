@@ -71,6 +71,11 @@ public:
         return d_data.empty();
     }
 
+    unsigned long size() const {
+        std::lock_guard<std::mutex> _1(d_lock);
+        return d_data.size();
+    }
+
 };
 
 
