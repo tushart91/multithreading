@@ -31,8 +31,9 @@ struct ref_accumulate {
 template <typename InputIter, typename T>
 T parallel_accumulate(InputIter first, InputIter last, T init) {
     // Perform accumulate in parallel by using threads.
-    // The no of threads used will come from
-    // thread::hardware_concurrency()
+    // The no of threads used will come from thread::hardware_concurrency()
+    // and each thread will at least contain 25 elements.
+    // So less than 25 elements will use a single thread.
 
     const long length = distance(first, last);
 
