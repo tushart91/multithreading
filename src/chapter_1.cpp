@@ -8,11 +8,9 @@
 #include <mutex>
 #include <future>
 
-
 using namespace std;
 
-
-TEST (Chapter_1, Init) { /* NOLINT */
+TEST (Chapter_1, HelloConcurrentWorld) { /* NOLINT */
 
     mutex lock;
 
