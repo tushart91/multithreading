@@ -19,8 +19,8 @@ namespace {
 
 template <typename InputIter, typename T>
 struct ref_accumulate {
-    // Need struct so we can instantiate the template object
-    // and then pass it to the thread, because a function's reference cannot be
+    // Need struct so we can instantiate the template object and then pass it
+    // to the thread, because a function's reference cannot be
     // determined if it uses templates
     void operator ()(InputIter first, InputIter last, T& init) {
         // accumulate function, returns by reference
